@@ -68,7 +68,8 @@ const ContactSection = () => {
 
             <div className="mt-10 p-6 border border-border">
               <p className="text-sm text-muted-foreground font-body">
-                <strong className="text-foreground">Ubicación:</strong> Provincia de Buenos Aires, Argentina
+                <strong className="text-foreground">Ubicación:</strong>{" "}
+                <a href="https://www.google.com/maps/place/Amighini+Arquitectural/@-34.4585881,-58.6931749,17z/data=!4m6!3m5!1s0x95bca252beee57ff:0xeaabe00b2e214c3c!8m2!3d-34.4581562!4d-58.6924968!16s%2Fg%2F11jk3nxf1s" target="_blank" rel="noopener noreferrer" className="hover:text-bronze transition-colors duration-300 underline underline-offset-4 decoration-bronze/40">El Triangulo, Provincia de Buenos Aires, Argentina</a>
               </p>
               <p className="text-xs text-muted-foreground mt-2">
                 Salvamento arquitectónico premium · Restauración artesanal · Diseño a medida
