@@ -33,7 +33,7 @@ const ShowroomSection = () => {
               <div className="flex items-start gap-4">
                 <MapPin className="text-bronze mt-1 flex-shrink-0" size={20} />
                 <div>
-                  <p className="text-foreground font-body font-medium">Provincia de Buenos Aires, Argentina</p>
+                  <a href="https://www.google.com/maps/place/Amighini+Arquitectural/@-34.4585881,-58.6931749,17z/data=!4m6!3m5!1s0x95bca252beee57ff:0xeaabe00b2e214c3c!8m2!3d-34.4581562!4d-58.6924968!16s%2Fg%2F11jk3nxf1s" target="_blank" rel="noopener noreferrer" className="text-foreground font-body font-medium hover:text-bronze transition-colors duration-300 underline underline-offset-4 decoration-bronze/40">Provincia de Buenos Aires, Argentina</a>
                   <p className="text-sm text-muted-foreground">Visitas con cita previa</p>
                 </div>
               </div>
@@ -72,24 +72,7 @@ const ShowroomSection = () => {
           </motion.div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="mt-16"
-        >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.5!2d-58.6931749!3d-34.4585881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca252beee57ff%3A0xeaabe00b2e214c3c!2sAmighini%20Arquitectural!5e0!3m2!1ses-419!2sar!4v1700000000000!5m2!1ses-419!2sar"
-            width="100%"
-            height="400"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="w-full"
-            title="Ubicación de Amighini Arquitectural en Google Maps"
-          />
-        </motion.div>
+
       </div>
     </section>
   );
