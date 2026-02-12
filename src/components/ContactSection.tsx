@@ -51,7 +51,7 @@ const ContactSection = () => {
               </a>
 
               <a
-                href="https://instagram.com/amighiniarquitectural"
+                href="https://www.instagram.com/amighinihome?igsh=MTN0NzdvbDd3NDBjOQ=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-foreground hover:text-bronze-light transition-colors group"
@@ -60,7 +60,7 @@ const ContactSection = () => {
                   <Instagram size={18} className="text-bronze" />
                 </div>
                 <div>
-                  <p className="font-body font-medium">@amighiniarquitectural</p>
+                  <p className="font-body font-medium">@amighinihome</p>
                   <p className="text-sm text-muted-foreground">Seguinos en Instagram</p>
                 </div>
               </a>
