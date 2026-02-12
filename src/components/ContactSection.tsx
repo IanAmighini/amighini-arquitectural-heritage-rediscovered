@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Send, Instagram, Phone } from "lucide-react";
+import { Send, Instagram, MessageCircle } from "lucide-react";
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -10,7 +10,7 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = `Hola, soy ${formData.name}. ${formData.message}`;
-    window.open(`https://wa.me/5491100000000?text=${encodeURIComponent(text)}`, "_blank");
+    window.open(`https://wa.me/5491134614400?text=${encodeURIComponent(text)}`, "_blank");
   };
 
   return (
@@ -36,13 +36,13 @@ const ContactSection = () => {
 
             <div className="space-y-6">
               <a
-                href="https://wa.me/5491100000000"
+                href="https://wa.me/5491134614400?text=Buenos%20dias,%20andaba%20buscando%20..."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-foreground hover:text-bronze-light transition-colors group"
               >
                 <div className="w-12 h-12 border border-bronze/30 flex items-center justify-center group-hover:border-bronze transition-colors">
-                  <Phone size={18} className="text-bronze" />
+                  <MessageCircle size={18} className="text-bronze" />
                 </div>
                 <div>
                   <p className="font-body font-medium">WhatsApp Directo</p>
