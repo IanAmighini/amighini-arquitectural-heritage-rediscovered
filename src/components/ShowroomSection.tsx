@@ -33,7 +33,7 @@ const ShowroomSection = () => {
               <div className="flex items-start gap-4">
                 <MapPin className="text-bronze mt-1 flex-shrink-0" size={20} />
                 <div>
-                  <a href="https://www.google.com/maps/place/Amighini+Arquitectural/@-34.4585881,-58.6931749,17z/data=!4m6!3m5!1s0x95bca252beee57ff:0xeaabe00b2e214c3c!8m2!3d-34.4581562!4d-58.6924968!16s%2Fg%2F11jk3nxf1s" target="_blank" rel="noopener noreferrer" className="text-foreground font-body font-medium hover:text-bronze transition-colors duration-300 underline underline-offset-4 decoration-bronze/40">El Triangulo, Provincia de Buenos Aires, Argentina</a>
+                  <a href="https://maps.app.goo.gl/QFbRGMTzLfRSvFYy6" target="_blank" rel="noopener noreferrer" className="text-foreground font-body font-medium hover:text-bronze transition-colors duration-300 underline underline-offset-4 decoration-bronze/40">El Triangulo, Provincia de Buenos Aires, Argentina</a>
                   <p className="text-sm text-muted-foreground">Visitas con cita previa</p>
                 </div>
               </div>
