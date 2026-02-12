@@ -7,7 +7,6 @@ const navLinks = [
   { label: "Nosotros", href: "#nosotros" },
   { label: "Colección", href: "#coleccion" },
   { label: "Showroom", href: "#showroom" },
-  { label: "A Medida", href: "#medida" },
   { label: "Contacto", href: "#contacto" },
 ];
 
@@ -44,10 +43,10 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#contacto"
+            href="#coleccion"
             className="ml-4 px-6 py-2.5 border border-bronze text-sm tracking-[0.15em] uppercase text-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300"
           >
-            Consulta Privada
+            Ver Colección
           </a>
         </div>
 
@@ -82,11 +81,11 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="#contacto"
+                href="#coleccion"
                 onClick={() => setOpen(false)}
                 className="px-6 py-2.5 border border-bronze text-sm tracking-[0.15em] uppercase text-foreground"
               >
-                Consulta Privada
+                Ver Colección
               </a>
             </div>
           </motion.div>
