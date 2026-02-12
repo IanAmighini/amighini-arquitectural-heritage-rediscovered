@@ -27,11 +27,11 @@ const ContactSection = () => {
               Contacto
             </span>
             <h2 className="font-heading text-3xl md:text-5xl text-foreground mb-6">
-              Hablemos de tu proyecto
+              Encontrá tu pieza
             </h2>
             <p className="text-muted-foreground font-body leading-relaxed mb-10">
-              Cada proyecto comienza con una conversación. Contanos tu visión y creamos juntos
-              algo extraordinario. Piezas arquitectónicas únicas en Buenos Aires, Argentina.
+              ¿Buscás una puerta única, una reja de época o un elemento arquitectónico con historia?
+              Escribinos y te mostramos lo que tenemos disponible para vos.
             </p>
 
             <div className="space-y-6">
