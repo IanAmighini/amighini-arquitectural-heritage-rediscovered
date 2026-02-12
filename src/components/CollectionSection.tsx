@@ -7,32 +7,32 @@ import detailIronImage from "@/assets/detail-iron.jpg";
 const categories = [
   {
     title: "Puertas Únicas",
-    description: "Puertas antiguas únicas en Argentina, restauradas con técnicas artesanales premium.",
+    description: "Puertas antiguas únicas en Argentina, restauradas y listas para instalar.",
     image: collectionImage,
   },
   {
     title: "Salvamento Arquitectónico",
-    description: "Elementos arquitectónicos restaurados de edificios históricos de Buenos Aires.",
+    description: "Elementos arquitectónicos recuperados de edificios históricos de Buenos Aires.",
     image: detailIronImage,
   },
   {
     title: "Hierro & Metal",
-    description: "Arte en madera y hierro. Rejas, herrajes y piezas ornamentales de colección.",
+    description: "Rejas, herrajes y piezas ornamentales de colección disponibles en stock.",
     image: detailIronImage,
-  },
-  {
-    title: "Creaciones a Medida",
-    description: "Piezas de diseño a medida para proyectos exclusivos de arquitectura premium.",
-    image: collectionImage,
   },
   {
     title: "Ventanas & Aberturas",
-    description: "Aberturas antiguas restauradas. Diseño arquitectónico con historia.",
+    description: "Aberturas antiguas restauradas, listas para llevar.",
     image: detailIronImage,
   },
   {
+    title: "Mobiliario & Deco",
+    description: "Muebles y objetos decorativos con historia, restaurados y listos para tu espacio.",
+    image: collectionImage,
+  },
+  {
     title: "Piezas Destacadas",
-    description: "Selección curada de nuestras piezas arquitectónicas únicas en Buenos Aires.",
+    description: "Selección curada de nuestras mejores piezas disponibles ahora.",
     image: collectionImage,
   },
 ];
@@ -55,10 +55,10 @@ const CollectionSection = () => {
             La Colección
           </span>
           <h2 className="font-heading text-3xl md:text-5xl text-foreground mb-4">
-            Piezas arquitectónicas únicas
+            Piezas disponibles ahora
           </h2>
           <p className="text-muted-foreground font-body max-w-xl mx-auto">
-            Cada pieza cuenta una historia. Cada restauración honra su legado.
+            Cada pieza cuenta una historia. Restauradas y listas para llevar a tu espacio.
           </p>
         </motion.div>
 

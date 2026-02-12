@@ -43,7 +43,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 1 }}
           className="font-body text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Piezas únicas, restauradas y diseñadas para espacios extraordinarios.
+          Piezas únicas listas para llevar. Restauradas con artesanía premium para espacios extraordinarios.
         </motion.p>
 
         <motion.div
@@ -56,13 +56,13 @@ const HeroSection = () => {
             href="#coleccion"
             className="px-10 py-4 bg-accent text-accent-foreground font-body text-sm tracking-[0.2em] uppercase hover:bg-bronze-light transition-colors duration-300"
           >
-            Explorar Colección
+            Ver Piezas Disponibles
           </a>
           <a
-            href="#contacto"
+            href="#showroom"
             className="px-10 py-4 border border-foreground/30 text-foreground font-body text-sm tracking-[0.2em] uppercase hover:border-bronze hover:text-bronze-light transition-colors duration-300"
           >
-            Agendar Consulta Privada
+            Visitar el Showroom
           </a>
         </motion.div>
       </div>

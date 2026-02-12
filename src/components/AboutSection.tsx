@@ -49,8 +49,8 @@ const AboutSection = () => {
                 colección.
               </p>
               <p>
-                Desde puertas antiguas únicas hasta creaciones a medida en madera y hierro, trabajamos con la
-                convicción de que los materiales con historia merecen una nueva vida a la altura de su legado.
+                Desde puertas antiguas únicas hasta piezas de hierro y madera, seleccionamos, restauramos y
+                ofrecemos elementos con historia listos para transformar tu espacio.
               </p>
             </div>
             <div className="divider-bronze my-10" />
