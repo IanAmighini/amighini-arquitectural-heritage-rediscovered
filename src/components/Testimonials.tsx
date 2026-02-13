@@ -4,18 +4,18 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    text: "INSUPERABLES. Diseño hasta manufactura artesanal de la madera. Herencia arquitectónica en cada detalle.",
-    author: "Cliente verificado",
+    text: "Muy buena atención, y hay de todo. Lo usado en buen estado.",
+    author: "Fernando",
     location: "Buenos Aires",
   },
   {
-    text: "Artesanos!!! Venta de antigüedades de calidad únicas. Restauración artesanal en Buenos Aires de primer nivel.",
-    author: "Cliente verificado",
-    location: "Provincia de Buenos Aires",
+    text: "Muy buen lugar para los que buscan puertas de todo estilo. Tienen un showroom con muchas antigüedades y piezas únicas que vale la pena ver.",
+    author: "Lucía",
+    location: "Buenos Aires",
   },
   {
-    text: "Extraordinarios elementos. Puertas antiguas únicas Argentina. Cada pieza es una obra de arte irrepetible.",
-    author: "Cliente verificado",
+    text: "Excelente atención y se encuentran muy buenas antigüedades.",
+    author: "Mercedes",
     location: "Buenos Aires",
   },
 ];
