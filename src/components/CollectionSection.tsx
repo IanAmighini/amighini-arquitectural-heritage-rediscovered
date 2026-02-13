@@ -6,33 +6,33 @@ import detailIronImage from "@/assets/detail-iron.jpg";
 
 const categories = [
   {
-    title: "Puertas Únicas",
-    description: "Puertas antiguas únicas en Argentina, restauradas y listas para instalar.",
+    title: "Puertas de Entrada",
+    description: "Puertas antiguas de entrada, restauradas y listas para instalar en tu hogar.",
     image: collectionImage,
   },
   {
-    title: "Salvamento Arquitectónico",
-    description: "Elementos arquitectónicos recuperados de edificios históricos de Buenos Aires.",
+    title: "Puertas de Interior",
+    description: "Puertas interiores de época con carácter y detalles únicos.",
     image: detailIronImage,
   },
   {
-    title: "Hierro & Metal",
+    title: "Hierro y Metal",
     description: "Rejas, herrajes y piezas ornamentales de colección disponibles en stock.",
     image: detailIronImage,
   },
   {
-    title: "Ventanas & Aberturas",
+    title: "Ventanas y Aberturas",
     description: "Aberturas antiguas restauradas, listas para llevar.",
     image: detailIronImage,
   },
   {
-    title: "Mobiliario & Deco",
-    description: "Muebles y objetos decorativos con historia, restaurados y listos para tu espacio.",
+    title: "Mobiliario",
+    description: "Muebles con historia, restaurados y listos para tu espacio.",
     image: collectionImage,
   },
   {
-    title: "Piezas Destacadas",
-    description: "Selección curada de nuestras mejores piezas disponibles ahora.",
+    title: "Deco y más",
+    description: "Objetos decorativos y piezas especiales para darle vida a tu ambiente.",
     image: collectionImage,
   },
 ];
