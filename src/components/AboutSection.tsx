@@ -43,20 +43,20 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-6 text-muted-foreground font-body leading-relaxed">
               <p>
-                Bajo la dirección del arquitecto <strong className="text-foreground">Cristian Amighini</strong>,
-                cada pieza que pasa por nuestro taller es tratada como una obra de arte. Décadas de experiencia en
-                diseño, restauración y fabricación nos permiten transformar elementos con historia en piezas de
-                colección.
+                Con más de tres décadas de trayectoria, la familia Amighini se dedica a buscar, seleccionar y
+                restaurar piezas arquitectónicas con historia. Cada elemento que llega a nuestro taller es
+                cuidadosamente evaluado y puesto en valor para ofrecerlo listo para su nuevo destino.
               </p>
               <p>
-                Desde puertas antiguas únicas hasta piezas de hierro y madera, seleccionamos, restauramos y
-                ofrecemos elementos con historia listos para transformar tu espacio.
+                Puertas antiguas, rejas de época, herrajes, aberturas y elementos decorativos — todo nuestro
+                catálogo está disponible para que lo veas, lo elijas y te lo lleves. Si necesitás alguna
+                pequeña adaptación, también podemos ayudarte.
               </p>
             </div>
             <div className="divider-bronze my-10" />
             <div className="grid grid-cols-3 gap-6 text-center">
               {[
-                { value: "20+", label: "Años de experiencia" },
+                { value: "30+", label: "Años de experiencia" },
                 { value: "500+", label: "Piezas restauradas" },
                 { value: "100%", label: "Artesanal" },
               ].map((stat) => (
