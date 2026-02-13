@@ -49,8 +49,7 @@ const AboutSection = () => {
               </p>
               <p>
                 Puertas antiguas, rejas de época, herrajes, aberturas y elementos decorativos — todo nuestro
-                catálogo está disponible para que lo veas, lo elijas y te lo lleves. Si necesitás alguna
-                pequeña adaptación, también podemos ayudarte.
+                catálogo está disponible para que lo veas, lo elijas y te lo lleves.
               </p>
             </div>
             <div className="divider-bronze my-10" />
