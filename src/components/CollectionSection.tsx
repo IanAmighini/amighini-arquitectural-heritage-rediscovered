@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import collectionImage from "@/assets/collection.jpg";
 import detailIronImage from "@/assets/detail-iron.jpg";
+import mobiliarioImage from "@/assets/mobiliario.jpg";
 
 const categories = [
   {
@@ -28,7 +29,7 @@ const categories = [
   {
     title: "Mobiliario",
     description: "Muebles con historia, restaurados y listos para tu espacio.",
-    image: collectionImage,
+    image: mobiliarioImage,
   },
   {
     title: "Deco y más",
