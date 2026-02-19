@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import collectionImage from "@/assets/collection.jpg";
 import detailIronImage from "@/assets/detail-iron.jpg";
 import mobiliarioImage from "@/assets/mobiliario.jpg";
+import interiorDoorImage from "@/assets/interior-door.jpg";
 
 const categories = [
   {
@@ -14,7 +15,7 @@ const categories = [
   {
     title: "Puertas de Interior",
     description: "Puertas interiores de época con carácter y detalles únicos.",
-    image: detailIronImage,
+    image: interiorDoorImage,
   },
   {
     title: "Hierro y Metal",
