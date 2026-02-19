@@ -5,12 +5,13 @@ import collectionImage from "@/assets/collection.jpg";
 import detailIronImage from "@/assets/detail-iron.jpg";
 import mobiliarioImage from "@/assets/mobiliario.jpg";
 import interiorDoorImage from "@/assets/interior-door.jpg";
+import entradaDoorImage from "@/assets/entrada-door.jpg";
 
 const categories = [
   {
     title: "Puertas de Entrada",
     description: "Puertas antiguas de entrada, restauradas y listas para instalar en tu hogar.",
-    image: collectionImage,
+    image: entradaDoorImage,
   },
   {
     title: "Puertas de Interior",
