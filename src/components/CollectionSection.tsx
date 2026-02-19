@@ -22,7 +22,7 @@ const categories = [
     image: detailIronImage,
   },
   {
-    title: "Ventanas y Aberturas",
+    title: "Ventanas y Vitreaux",
     description: "Aberturas antiguas restauradas, listas para llevar.",
     image: detailIronImage,
   },
