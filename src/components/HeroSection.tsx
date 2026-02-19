@@ -33,8 +33,8 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.6 }}
           className="font-heading text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-medium leading-[1.1] tracking-tight text-foreground mb-6"
         >
-          Herencia arquitectónica{" "}
-          <em className="italic text-bronze-light">reimaginada</em>
+          Antigüedades con{" "}
+          <em className="italic text-bronze-light">carácter</em>
         </motion.h1>
 
         <motion.p
