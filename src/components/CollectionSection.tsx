@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import collectionImage from "@/assets/collection.jpg";
+import puertasEntradaImage from "@/assets/puertas-entrada.jpg";
 import detailIronImage from "@/assets/detail-iron.jpg";
 import mobiliarioImage from "@/assets/mobiliario.jpg";
 
@@ -9,7 +10,7 @@ const categories = [
   {
     title: "Puertas de Entrada",
     description: "Puertas antiguas de entrada, restauradas y listas para instalar en tu hogar.",
-    image: collectionImage,
+    image: puertasEntradaImage,
   },
   {
     title: "Puertas de Interior",
