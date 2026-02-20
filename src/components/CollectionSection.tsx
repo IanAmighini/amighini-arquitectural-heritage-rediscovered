@@ -1,13 +1,13 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
-import collectionImage from "@/assets/collection.jpg";
-import detailIronImage from "@/assets/detail-iron.jpg";
-import mobiliarioImage from "@/assets/mobiliario.jpg";
-import interiorDoorImage from "@/assets/interior-door.jpg";
-import entradaDoorImage from "@/assets/entrada-door.jpg";
-import vitreauxImage from "@/assets/vitreaux.jpg";
-import decoImage from "@/assets/deco.jpg";
+import collectionImage from "@/assets/coleccion-piezas-antiguas-amighini.jpg";
+import detailIronImage from "@/assets/herrajes-hierro-antiguos-amighini.jpg";
+import mobiliarioImage from "@/assets/mobiliario-vintage-amighini.jpg";
+import interiorDoorImage from "@/assets/puertas-interior-antiguas-amighini.jpg";
+import entradaDoorImage from "@/assets/puertas-entrada-antiguas-amighini.jpg";
+import vitreauxImage from "@/assets/ventanas-vitreaux-antiguos-amighini.jpg";
+import decoImage from "@/assets/decoracion-vintage-amighini.jpg";
 
 const categories = [
   {

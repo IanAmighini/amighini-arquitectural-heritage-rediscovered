@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { MapPin, Clock, CalendarCheck } from "lucide-react";
-import showroomImage from "@/assets/showroom.jpg";
+import showroomImage from "@/assets/showroom-piezas-antiguas-amighini.jpg";
 
 const ShowroomSection = () => {
   const ref = useRef(null);
