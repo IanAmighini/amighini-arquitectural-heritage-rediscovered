@@ -7,6 +7,7 @@ import mobiliarioImage from "@/assets/mobiliario.jpg";
 import interiorDoorImage from "@/assets/interior-door.jpg";
 import entradaDoorImage from "@/assets/entrada-door.jpg";
 import vitreauxImage from "@/assets/vitreaux.jpg";
+import decoImage from "@/assets/deco.jpg";
 
 const categories = [
   {
@@ -37,7 +38,7 @@ const categories = [
   {
     title: "Deco y más",
     description: "Objetos decorativos y piezas especiales para darle vida a tu ambiente.",
-    image: collectionImage,
+    image: decoImage,
   },
 ];
 
