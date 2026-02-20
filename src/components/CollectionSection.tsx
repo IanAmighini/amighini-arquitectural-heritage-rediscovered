@@ -6,6 +6,7 @@ import detailIronImage from "@/assets/detail-iron.jpg";
 import mobiliarioImage from "@/assets/mobiliario.jpg";
 import interiorDoorImage from "@/assets/interior-door.jpg";
 import entradaDoorImage from "@/assets/entrada-door.jpg";
+import vitreauxImage from "@/assets/vitreaux.jpg";
 
 const categories = [
   {
@@ -26,7 +27,7 @@ const categories = [
   {
     title: "Ventanas y Vitreaux",
     description: "Aberturas antiguas restauradas, listas para llevar.",
-    image: detailIronImage,
+    image: vitreauxImage,
   },
   {
     title: "Mobiliario",
