@@ -79,8 +79,9 @@ const CollectionSection = () => {
             >
               <img
                 src={cat.image}
-                alt={cat.title}
+                alt={`${cat.title} — piezas antiguas restauradas en Buenos Aires | Amighini`}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-background/60 group-hover:bg-background/75 transition-colors duration-500" />
               <div className="absolute inset-0 flex flex-col justify-end p-8">
