@@ -1,11 +1,11 @@
+import logoAmighini from "@/assets/logo-amighini-arquitectural.png";
+
 const Footer = () => (
   <footer className="py-12 bg-background border-t border-border">
     <div className="container mx-auto px-6 lg:px-12">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
-          <p className="font-heading text-lg tracking-widest uppercase text-foreground">
-            Amighini Arquitectural
-          </p>
+          <img src={logoAmighini} alt="Amighini Arquitectural" className="h-14 w-auto mb-2" />
           <p className="text-xs text-muted-foreground mt-1 font-body">
             Herencia arquitectónica reimaginada · Buenos Aires, Argentina
           </p>

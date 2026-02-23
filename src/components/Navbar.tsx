@@ -29,7 +29,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6 lg:px-12">
         <a href="#" className="flex items-center">
-          <img src={logoAmighini} alt="Amighini Arquitectural" className="h-14 md:h-16 w-auto" />
+          <img src={logoAmighini} alt="Amighini Arquitectural" className="h-16 md:h-20 w-auto" />
         </a>
 
         {/* Desktop */}
