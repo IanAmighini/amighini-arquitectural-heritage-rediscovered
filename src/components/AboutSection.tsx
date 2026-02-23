@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import workshopImage from "@/assets/taller-restauracion-amighini.jpg";
+import workshopImage from "@/assets/cartel-casa-amighini-demoliciones.jpg";
 
 const AboutSection = () => {
   const ref = useRef(null);
