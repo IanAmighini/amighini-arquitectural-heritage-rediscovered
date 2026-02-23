@@ -72,7 +72,7 @@ const ContactSection = () => {
                 <a href="https://maps.app.goo.gl/QFbRGMTzLfRSvFYy6" target="_blank" rel="noopener noreferrer" className="hover:text-bronze transition-colors duration-300 underline underline-offset-4 decoration-bronze/40">El Triangulo, Provincia de Buenos Aires, Argentina</a>
               </p>
               <p className="text-xs text-muted-foreground mt-2">
-                Salvamento arquitectónico premium · Restauración artesanal · Diseño a medida
+                Piezas arquitectónicas con historia · Restauración artesanal · Listas para llevar
               </p>
             </div>
           </motion.div>
