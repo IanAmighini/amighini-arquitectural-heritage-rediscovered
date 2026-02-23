@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoAmighini from "@/assets/logo-amighini-arquitectural.png";
 
 const navLinks = [
   { label: "Inicio", href: "#" },
@@ -27,8 +28,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6 lg:px-12">
-        <a href="#" className="font-heading text-xl md:text-2xl tracking-widest text-foreground uppercase">
-          Amighini
+        <a href="#" className="flex items-center">
+          <img src={logoAmighini} alt="Amighini Arquitectural" className="h-10 md:h-12 w-auto" />
         </a>
 
         {/* Desktop */}
