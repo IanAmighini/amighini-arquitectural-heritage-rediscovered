@@ -4,11 +4,9 @@ const Footer = () => (
   <footer className="py-12 bg-background border-t border-border">
     <div className="container mx-auto px-6 lg:px-12">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-        <div>
-          <img src={logoAmighini} alt="Amighini Arquitectural" className="h-14 w-auto mb-2" />
-          <p className="text-xs text-muted-foreground mt-1 font-body">
-            Herencia arquitectónica reimaginada · Buenos Aires, Argentina
-          </p>
+        <div className="flex items-center gap-4">
+          <img src={logoAmighini} alt="Amighini Arquitectural" className="h-16 md:h-20 w-auto" />
+          <span className="text-xs text-muted-foreground tracking-wide font-body">Buenos Aires, Argentina</span>
         </div>
         <div className="flex items-center gap-8">
           {["Nosotros", "Colección", "Showroom", "Contacto"].map((link) => (
