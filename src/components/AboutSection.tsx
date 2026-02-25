@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import workshopImage from "@/assets/cartel-casa-amighini-demoliciones.jpg";
+import workshopImage from "@/assets/fachada-showroom-amighini-arquitectural.jpg";
 
 const AboutSection = () => {
   const ref = useRef(null);
@@ -21,8 +21,8 @@ const AboutSection = () => {
             <div className="overflow-hidden">
               <img
                 src={workshopImage}
-                alt="Taller artesanal de restauración de puertas antiguas en Buenos Aires"
-                className="w-full aspect-[4/5] object-cover"
+                alt="Fachada del showroom Amighini Arquitectural en Buenos Aires con piezas antiguas"
+                className="w-full aspect-[16/9] lg:aspect-[4/3] object-cover"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border border-bronze/30" />
