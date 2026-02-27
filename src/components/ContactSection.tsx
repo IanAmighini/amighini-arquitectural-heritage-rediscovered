@@ -6,11 +6,45 @@ const ContactSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-50px" });
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const text = `Hola, soy ${formData.name}. ${formData.message}`;
-    window.open(`https://wa.me/5491134614400?text=${encodeURIComponent(text)}`, "_blank");
+    setSending(true);
+
+    const data = new FormData();
+    data.append("name", formData.name);
+    data.append("email", formData.email);
+    data.append("phone", formData.phone);
+    data.append("message", formData.message);
+    data.append("_subject", "Nuevo contacto desde la web - Amighini Arquitectural");
+    data.append("_template", "table");
+
+    try {
+      const resp = await fetch("https://formsubmit.co/ajax/mail@arquitectural.com.ar", {
+        method: "POST",
+        body: data,
+      });
+      if (!resp.ok) throw new Error("Error " + resp.status);
+      try { await resp.json(); } catch {}
+
+      alert("¡Gracias! Recibimos tu mensaje, te contactamos a la brevedad.");
+      setFormData({ name: "", email: "", phone: "", message: "" });
+
+      const texto =
+        "Nueva consulta desde amighini.com.ar\n" +
+        "Nombre: " + formData.name + "\n" +
+        "Email: " + formData.email + "\n" +
+        "Teléfono: " + formData.phone + "\n\n" +
+        "Mensaje:\n" + formData.message;
+      window.open("https://wa.me/5491134614400?text=" + encodeURIComponent(texto), "_blank");
+
+    } catch (err) {
+      console.error(err);
+      alert("Hubo un problema al enviar el formulario. Intentá de nuevo más tarde.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -86,7 +120,7 @@ const ContactSection = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="text-xs tracking-[0.15em] uppercase text-muted-foreground font-body block mb-2">
-                  Nombre
+                  Nombre *
                 </label>
                 <input
                   type="text"
@@ -98,7 +132,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <label className="text-xs tracking-[0.15em] uppercase text-muted-foreground font-body block mb-2">
-                  Email
+                  Email *
                 </label>
                 <input
                   type="email"
@@ -121,7 +155,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <label className="text-xs tracking-[0.15em] uppercase text-muted-foreground font-body block mb-2">
-                  Mensaje
+                  Mensaje *
                 </label>
                 <textarea
                   rows={4}
@@ -133,10 +167,11 @@ const ContactSection = () => {
               </div>
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-accent text-accent-foreground font-body text-sm tracking-[0.2em] uppercase hover:bg-bronze-light transition-colors duration-300"
+                disabled={sending}
+                className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-accent text-accent-foreground font-body text-sm tracking-[0.2em] uppercase hover:bg-bronze-light transition-colors duration-300 disabled:opacity-50"
               >
                 <Send size={16} />
-                Enviar Consulta
+                {sending ? "Enviando..." : "Enviar Consulta"}
               </button>
             </form>
           </motion.div>
