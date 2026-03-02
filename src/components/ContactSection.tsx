@@ -2,6 +2,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Send, Instagram, MessageCircle } from "lucide-react";
 
+const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScR3JheBWebXMvyOaCtdSX_SXmpcHseT8khUyg6IzACCn4jRA/formResponse";
+
 const ContactSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-50px" });
@@ -27,26 +29,38 @@ const ContactSection = () => {
       });
       if (!resp.ok) throw new Error("Error " + resp.status);
       try { await resp.json(); } catch {}
-
-      alert("¡Gracias! Recibimos tu mensaje, te contactamos a la brevedad.");
-      setFormData({ name: "", email: "", phone: "", message: "" });
-
-      const texto =
-        "Nueva consulta desde amighini.com.ar\n" +
-        "Nombre: " + formData.name + "\n" +
-        "Email: " + formData.email + "\n" +
-        "Teléfono: " + formData.phone + "\n\n" +
-        "Mensaje:\n" + formData.message;
-      window.open("https://wa.me/5491134614400?text=" + encodeURIComponent(texto), "_blank");
-
     } catch (err) {
-      console.error(err);
-      alert("Hubo un problema al enviar el formulario. Intentá de nuevo más tarde.");
-    } finally {
-      setSending(false);
+      console.error("FormSubmit error:", err);
     }
-  };
 
+    try {
+      const googleData = new FormData();
+      googleData.append("entry.2024537176", formData.name);
+      googleData.append("entry.840091570", formData.email);
+      googleData.append("entry.1019948260", formData.phone);
+      googleData.append("entry.1428200073", formData.message);
+      await fetch(GOOGLE_FORM_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: googleData,
+      });
+    } catch (err) {
+      console.error("Google Forms error:", err);
+    }
+
+    alert("¡Gracias! Recibimos tu mensaje, te contactamos a la brevedad.");
+    setFormData({ name: "", email: "", phone: "", message: "" });
+
+    const texto =
+      "Nueva consulta desde amighini.com.ar\n" +
+      "Nombre: " + formData.name + "\n" +
+      "Email: " + formData.email + "\n" +
+      "Teléfono: " + formData.phone + "\n\n" +
+      "Mensaje:\n" + formData.message;
+    window.open("https://wa.me/5491134614400?text=" + encodeURIComponent(texto), "_blank");
+
+    setSending(false);
+  };
   return (
     <section id="contacto" className="py-24 lg:py-32 bg-gradient-dark">
       <div className="container mx-auto px-6 lg:px-12">
