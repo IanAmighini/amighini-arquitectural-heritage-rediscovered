@@ -17,7 +17,7 @@ const ShowroomSection = () => {
             transition={{ duration: 1 }}
           >
             <span className="text-sm tracking-[0.3em] uppercase text-bronze font-body mb-4 block">
-              Showroom
+              Showroom Presencial
             </span>
             <h2 className="font-heading text-3xl md:text-5xl text-foreground mb-6 leading-tight">
               Viví la experiencia{" "}
