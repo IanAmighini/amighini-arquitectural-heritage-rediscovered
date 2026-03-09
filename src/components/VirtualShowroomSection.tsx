@@ -1,6 +1,20 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      "model-viewer": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
+        src?: string;
+        "auto-rotate"?: boolean | string;
+        "camera-controls"?: boolean | string;
+        "shadow-intensity"?: string;
+        "environment-image"?: string;
+      };
+    }
+  }
+}
+
 const VirtualShowroomSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-50px" });
