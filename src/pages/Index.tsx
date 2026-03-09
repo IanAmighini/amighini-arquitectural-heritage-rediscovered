@@ -5,6 +5,7 @@ import CollectionSection from "@/components/CollectionSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
 import ShowroomSection from "@/components/ShowroomSection";
+import VirtualShowroomSection from "@/components/VirtualShowroomSection";
 import CustomWorkSection from "@/components/CustomWorkSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
