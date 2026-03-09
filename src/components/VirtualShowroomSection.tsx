@@ -44,15 +44,13 @@ const VirtualShowroomSection = () => {
           className="relative"
         >
           <div className="overflow-hidden border border-border">
-            {/* @ts-ignore */}
             <model-viewer
               src="/models/showroom.glb"
               auto-rotate
               camera-controls
-              style={{ width: "100%", height: "400px" }}
-              className="md:!h-[600px]"
               shadow-intensity="1"
               environment-image="neutral"
+              style={{ width: "100%", height: "clamp(400px, 50vw, 600px)" }}
             />
           </div>
           <div className="absolute -top-4 -right-4 w-24 h-24 border border-bronze/30" />
