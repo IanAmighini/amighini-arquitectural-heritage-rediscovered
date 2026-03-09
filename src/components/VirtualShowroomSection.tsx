@@ -1,5 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 declare global {
   namespace JSX {
@@ -15,12 +15,20 @@ declare global {
   }
 }
 
+const spaces = [
+  { id: "living-1", label: "Living 1", model: "/models/living-1.glb" },
+  { id: "living-2", label: "Living 2", model: "/models/living-2.glb" },
+  { id: "patio", label: "Patio", model: "/models/patio.glb" },
+  { id: "entrada", label: "Entrada", model: "/models/entrada.glb" },
+  { id: "galeria", label: "Galería", model: "/models/galeria.glb" },
+];
+
 const VirtualShowroomSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-50px" });
+  const [activeSpace, setActiveSpace] = useState(spaces[0]);
 
   useEffect(() => {
-    // Load model-viewer script
     if (!document.querySelector('script[src*="model-viewer"]')) {
       const script = document.createElement("script");
       script.type = "module";
@@ -51,6 +59,29 @@ const VirtualShowroomSection = () => {
           </motion.div>
         </div>
 
+        {/* Space selector cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="flex flex-wrap justify-center gap-3 mb-10"
+        >
+          {spaces.map((space) => (
+            <button
+              key={space.id}
+              onClick={() => setActiveSpace(space)}
+              className={`px-5 py-3 font-body text-sm tracking-[0.15em] uppercase border transition-all duration-300 ${
+                activeSpace.id === space.id
+                  ? "bg-accent text-accent-foreground border-accent"
+                  : "bg-transparent text-muted-foreground border-border hover:border-bronze hover:text-foreground"
+              }`}
+            >
+              {space.label}
+            </button>
+          ))}
+        </motion.div>
+
+        {/* 3D Viewer */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -59,7 +90,8 @@ const VirtualShowroomSection = () => {
         >
           <div className="overflow-hidden border border-border">
             <model-viewer
-              src="/models/showroom.glb"
+              key={activeSpace.id}
+              src={activeSpace.model}
               auto-rotate
               camera-controls
               shadow-intensity="1"
