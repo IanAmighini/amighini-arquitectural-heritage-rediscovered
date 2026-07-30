@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoAmighini from "@/assets/logo-amighini-arquitectural.png";
+import logoAmighini from "@/assets/logo-amighini-arquitectural.webp";
 
 const navLinks = [
   { label: "Inicio", href: "#" },
