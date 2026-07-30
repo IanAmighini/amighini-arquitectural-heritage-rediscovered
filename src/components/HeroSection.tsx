@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroImage from "@/assets/puerta-antigua-restaurada-amighini.jpg";
+import heroImage from "@/assets/puerta-antigua-restaurada-amighini.webp";
 
 const HeroSection = () => {
   return (
