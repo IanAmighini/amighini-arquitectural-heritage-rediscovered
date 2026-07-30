@@ -1,4 +1,4 @@
-import logoAmighini from "@/assets/logo-amighini-arquitectural.png";
+import logoAmighini from "@/assets/logo-amighini-arquitectural.webp";
 
 const Footer = () => (
   <footer className="py-12 bg-background border-t border-border">
