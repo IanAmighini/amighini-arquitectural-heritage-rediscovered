@@ -5,13 +5,13 @@ const Footer = () => (
     <div className="container mx-auto px-6 lg:px-12">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-5">
-          <img src={logoAmighini} alt="Amighini Arquitectural" className="h-20 md:h-24 w-auto" />
+          <img src={logoAmighini} alt="Amighini Arquitectural" width={400} height={225} loading="lazy" decoding="async" className="h-20 md:h-24 w-auto" />
           <div className="flex flex-col gap-0.5">
             <span className="text-xs text-muted-foreground tracking-wide font-body">Herencia arquitectónica reimaginada</span>
             <span className="text-xs text-muted-foreground tracking-wide font-body">Buenos Aires, Argentina</span>
           </div>
         </div>
-        <div className="flex items-center gap-8">
+        <nav aria-label="Enlaces del pie de página" className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
           {["Nosotros", "Colección", "Showroom", "Contacto"].map((link) => (
             <a
               key={link}
@@ -21,7 +21,7 @@ const Footer = () => (
               {link}
             </a>
           ))}
-        </div>
+        </nav>
       </div>
       <div className="divider-bronze my-8" />
       <p className="text-center text-xs text-muted-foreground font-body">

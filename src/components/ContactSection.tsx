@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { m, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Send, Instagram, MessageCircle } from "lucide-react";
 
@@ -66,7 +66,7 @@ const ContactSection = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div ref={ref} className="grid lg:grid-cols-2 gap-16">
           {/* Info */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1 }}
@@ -123,57 +123,68 @@ const ContactSection = () => {
                 Piezas arquitectónicas con historia · Restauración artesanal · Listas para llevar
               </p>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Form */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, delay: 0.2 }}
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="text-xs tracking-[0.15em] uppercase text-muted-foreground font-body block mb-2">
+                <label htmlFor="contact-name" className="text-xs tracking-[0.15em] uppercase text-muted-foreground font-body block mb-2">
                   Nombre *
                 </label>
                 <input
                   type="text"
                   required
+                  id="contact-name"
+                  name="name"
+                  autoComplete="name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full bg-transparent border border-border px-4 py-3 text-foreground font-body focus:border-bronze focus:outline-none transition-colors"
                 />
               </div>
               <div>
-                <label className="text-xs tracking-[0.15em] uppercase text-muted-foreground font-body block mb-2">
+                <label htmlFor="contact-email" className="text-xs tracking-[0.15em] uppercase text-muted-foreground font-body block mb-2">
                   Email *
                 </label>
                 <input
                   type="email"
                   required
+                  id="contact-email"
+                  name="email"
+                  autoComplete="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full bg-transparent border border-border px-4 py-3 text-foreground font-body focus:border-bronze focus:outline-none transition-colors"
                 />
               </div>
               <div>
-                <label className="text-xs tracking-[0.15em] uppercase text-muted-foreground font-body block mb-2">
+                <label htmlFor="contact-phone" className="text-xs tracking-[0.15em] uppercase text-muted-foreground font-body block mb-2">
                   Teléfono
                 </label>
                 <input
                   type="tel"
+                  id="contact-phone"
+                  name="phone"
+                  autoComplete="tel"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full bg-transparent border border-border px-4 py-3 text-foreground font-body focus:border-bronze focus:outline-none transition-colors"
                 />
               </div>
               <div>
-                <label className="text-xs tracking-[0.15em] uppercase text-muted-foreground font-body block mb-2">
+                <label htmlFor="contact-message" className="text-xs tracking-[0.15em] uppercase text-muted-foreground font-body block mb-2">
                   Mensaje *
                 </label>
                 <textarea
                   rows={4}
                   required
+                  id="contact-message"
+                  name="message"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full bg-transparent border border-border px-4 py-3 text-foreground font-body focus:border-bronze focus:outline-none transition-colors resize-none"
@@ -188,7 +199,7 @@ const ContactSection = () => {
                 {sending ? "Enviando..." : "Enviar Consulta"}
               </button>
             </form>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { m, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const CustomWorkSection = () => {
@@ -8,7 +8,7 @@ const CustomWorkSection = () => {
   return (
     <section id="medida" className="py-16 bg-background">
       <div className="container mx-auto px-6 lg:px-12">
-        <motion.div
+        <m.div
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -33,7 +33,7 @@ const CustomWorkSection = () => {
           >
             Consultar
           </a>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

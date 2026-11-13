@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { m, useInView } from "framer-motion";
 import { useRef } from "react";
 import workshopImage from "@/assets/fachada-showroom-amighini-arquitectural.webp";
 
@@ -12,7 +11,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div ref={ref} className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Image */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1 }}
@@ -22,14 +21,18 @@ const AboutSection = () => {
               <img
                 src={workshopImage}
                 alt="Fachada del showroom Amighini Arquitectural en Buenos Aires con piezas antiguas"
+                width={1400}
+                height={621}
+                loading="lazy"
+                decoding="async"
                 className="w-full aspect-[16/9] lg:aspect-[4/3] object-cover"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border border-bronze/30" />
-          </motion.div>
+          </m.div>
 
           {/* Content */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, delay: 0.2 }}
@@ -65,7 +68,7 @@ const AboutSection = () => {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { m, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Gem, Hammer, TreePine, Compass } from "lucide-react";
 
@@ -30,9 +30,9 @@ const WhyChooseUs = () => {
   const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section className="py-24 lg:py-32 bg-gradient-dark">
+    <section id="por-que-elegirnos" className="py-24 lg:py-32 bg-gradient-dark">
       <div className="container mx-auto px-6 lg:px-12">
-        <motion.div
+        <m.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -45,11 +45,11 @@ const WhyChooseUs = () => {
           <h2 className="font-heading text-3xl md:text-5xl text-foreground mb-4">
             Donde el valor supera al precio
           </h2>
-        </motion.div>
+        </m.div>
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {reasons.map((r, i) => (
-            <motion.div
+            <m.div
               key={r.title}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -59,7 +59,7 @@ const WhyChooseUs = () => {
               <r.icon className="text-bronze mb-6" size={32} strokeWidth={1} />
               <h3 className="font-heading text-xl md:text-2xl text-foreground mb-4">{r.title}</h3>
               <p className="text-muted-foreground font-body leading-relaxed text-sm">{r.description}</p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>
