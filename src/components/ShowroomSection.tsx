@@ -32,10 +32,14 @@ const ShowroomSection = () => {
             <div className="space-y-6 mb-10">
               <div className="flex items-start gap-4">
                 <MapPin className="text-bronze mt-1 flex-shrink-0" size={20} />
-                <div>
-                  <a href="https://maps.app.goo.gl/QFbRGMTzLfRSvFYy6" target="_blank" rel="noopener noreferrer" className="text-foreground font-body font-medium hover:text-bronze transition-colors duration-300 underline underline-offset-4 decoration-bronze/40">El Triangulo, Provincia de Buenos Aires, Argentina</a>
+                <address className="not-italic">
+                  <a href="https://www.google.com/maps?cid=16909855564515855420" target="_blank" rel="noopener noreferrer" className="text-foreground font-body font-medium hover:text-bronze transition-colors duration-300 underline underline-offset-4 decoration-bronze/40">
+                    Colectora Oeste Ramal Escobar km 33,7
+                    <br />
+                    B1615BFA El Triángulo, Provincia de Buenos Aires
+                  </a>
                   <p className="text-sm text-muted-foreground">Visitas con cita previa</p>
-                </div>
+                </address>
               </div>
               <div className="flex items-start gap-4">
                 <Clock className="text-bronze mt-1 flex-shrink-0" size={20} />

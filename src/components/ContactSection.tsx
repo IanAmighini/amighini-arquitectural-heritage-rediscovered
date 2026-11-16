@@ -117,7 +117,7 @@ const ContactSection = () => {
             <div className="mt-10 p-6 border border-border">
               <p className="text-sm text-muted-foreground font-body">
                 <strong className="text-foreground">Ubicación:</strong>{" "}
-                <a href="https://maps.app.goo.gl/QFbRGMTzLfRSvFYy6" target="_blank" rel="noopener noreferrer" className="hover:text-bronze transition-colors duration-300 underline underline-offset-4 decoration-bronze/40">El Triangulo, Provincia de Buenos Aires, Argentina</a>
+                <a href="https://www.google.com/maps?cid=16909855564515855420" target="_blank" rel="noopener noreferrer" className="hover:text-bronze transition-colors duration-300 underline underline-offset-4 decoration-bronze/40">Colectora Oeste Ramal Escobar km 33,7, El Triángulo, Provincia de Buenos Aires</a>
               </p>
               <p className="text-xs text-muted-foreground mt-2">
                 Piezas arquitectónicas con historia · Restauración artesanal · Listas para llevar
