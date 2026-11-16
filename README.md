@@ -1,73 +1,43 @@
-# Welcome to your Lovable project
+# Amighini Arquitectural — amighini.com.ar
 
-## Project info
+Sitio web de Amighini Arquitectural: puertas antiguas, rejas de época, herrajes y piezas arquitectónicas restauradas. Showroom en El Triángulo, Provincia de Buenos Aires.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Hecho con Vite, React, TypeScript, Tailwind CSS y Framer Motion.
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Desarrollo
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm install
+npm run dev        # http://localhost:8080
 ```
 
-**Edit a file directly in GitHub**
+## Build para publicar
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm run build
+```
 
-**Use GitHub Codespaces**
+Esto genera la carpeta `dist/` lista para subir. El build:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. Compila la app (`vite build`).
+2. **Prerenderiza** la página (`scripts/prerender.mjs`): `dist/index.html` sale con todo el contenido en HTML, así Google, Bing, WhatsApp y Facebook lo leen sin ejecutar JavaScript. Además genera `dist/404.html`.
 
-## What technologies are used for this project?
+También se puede descargar `dist` ya armado desde GitHub → Actions → "Build and Package" → artifact `dist`.
 
-This project is built with:
+## Publicar en Plesk
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Subí **el contenido** de `dist/` (no la carpeta en sí) a `httpdocs/` del dominio, reemplazando lo anterior.
+2. Asegurate de que se suba también `.htaccess` (es un archivo oculto; si comprimís en zip desde macOS/Windows, verificá que esté incluido).
+3. En Plesk → Hosting y DNS → **Hosting**: dejá como preferido el dominio **sin www** y activá el redireccionamiento 301 de HTTP a HTTPS (coincide con lo que hace `.htaccess`).
 
-## How can I deploy this project?
+## SEO — archivos clave
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+| Archivo | Para qué sirve |
+|---|---|
+| `index.html` | Título, descripción, canonical, Open Graph y datos estructurados (Store + WebSite) |
+| `public/robots.txt` | Permite el rastreo e indica el sitemap |
+| `public/sitemap.xml` | Lista de URLs para Google Search Console (actualizar `lastmod` si cambia el contenido) |
+| `public/og-image.jpg` | Imagen al compartir el link (1200×630) |
+| `public/.htaccess` | https + sin www, 404 real, compresión y caché |
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+El dominio oficial es **https://amighini.com.ar/** — usar siempre ese en metadatos.

@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { m, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Quote } from "lucide-react";
 
@@ -25,9 +25,9 @@ const Testimonials = () => {
   const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section className="py-24 lg:py-32 bg-background">
+    <section id="testimonios" className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-6 lg:px-12">
-        <motion.div
+        <m.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -40,25 +40,27 @@ const Testimonials = () => {
           <h2 className="font-heading text-3xl md:text-5xl text-foreground">
             Lo que dicen nuestros clientes
           </h2>
-        </motion.div>
+        </m.div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((t, i) => (
-            <motion.div
+            <m.figure
               key={i}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.15 }}
               className="border border-border p-8 lg:p-10 relative"
             >
-              <Quote className="text-bronze/30 mb-6" size={32} />
-              <p className="font-body text-foreground leading-relaxed mb-8 italic">
+              <Quote className="text-bronze/30 mb-6" size={32} aria-hidden="true" />
+              <blockquote className="font-body text-foreground leading-relaxed mb-8 italic">
                 "{t.text}"
-              </p>
+              </blockquote>
               <div className="divider-bronze mb-4" />
-              <p className="text-sm text-muted-foreground font-body">{t.author}</p>
-              <p className="text-xs text-bronze tracking-wider uppercase">{t.location}</p>
-            </motion.div>
+              <figcaption>
+                <p className="text-sm text-muted-foreground font-body">{t.author}</p>
+                <p className="text-xs text-bronze tracking-wider uppercase">{t.location}</p>
+              </figcaption>
+            </m.figure>
           ))}
         </div>
       </div>

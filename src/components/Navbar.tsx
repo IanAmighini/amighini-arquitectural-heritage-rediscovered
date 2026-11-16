@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import logoAmighini from "@/assets/logo-amighini-arquitectural.webp";
 
 const navLinks = [
@@ -23,13 +23,14 @@ const Navbar = () => {
 
   return (
     <nav
+      aria-label="Navegación principal"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled ? "bg-background/95 backdrop-blur-md border-b border-border" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6 lg:px-12">
-        <a href="#" className="flex items-center">
-          <img src={logoAmighini} alt="Amighini Arquitectural" className="h-16 md:h-20 w-auto" />
+        <a href="/" className="flex items-center" aria-label="Amighini Arquitectural — Inicio">
+          <img src={logoAmighini} alt="Amighini Arquitectural" width={400} height={225} className="h-16 md:h-20 w-auto" />
         </a>
 
         {/* Desktop */}
@@ -55,7 +56,8 @@ const Navbar = () => {
         <button
           className="lg:hidden text-foreground"
           onClick={() => setOpen(!open)}
-          aria-label="Menú"
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={open}
         >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -64,7 +66,7 @@ const Navbar = () => {
       {/* Mobile menu */}
       <AnimatePresence>
         {open && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -89,7 +91,7 @@ const Navbar = () => {
                 Ver Colección
               </a>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </nav>
