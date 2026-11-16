@@ -31,3 +31,5 @@ jobs:
         with:
           name: dist
           path: dist/
+          # Incluye .htaccess (archivo oculto)
+          include-hidden-files: true

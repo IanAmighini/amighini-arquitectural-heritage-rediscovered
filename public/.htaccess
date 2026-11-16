@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------
 # Amighini Arquitectural — configuración Apache para Plesk
-# Este archivo se copia a dist/ en cada build. Subilo junto con el
-# resto de dist/ a la carpeta httpdocs del dominio.
+# Solo lo usa Apache (Plesk en Linux). En Plesk para Windows (IIS)
+# se usa web.config, que hace lo mismo. Ambos se copian a dist/.
 # ------------------------------------------------------------------
 
 Options -Indexes
@@ -9,6 +9,7 @@ DirectoryIndex index.html
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteBase /
 
   # 1) Una sola versión del sitio: https://amighini.com.ar (sin www).
   #    Evita contenido duplicado en Google.
@@ -38,6 +39,8 @@ ErrorDocument 404 /404.html
   ExpiresByType text/plain "access plus 1 day"
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
   ExpiresByType image/x-icon "access plus 1 month"
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"

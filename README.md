@@ -27,7 +27,7 @@ También se puede descargar `dist` ya armado desde GitHub → Actions → "Build
 ## Publicar en Plesk
 
 1. Subí **el contenido** de `dist/` (no la carpeta en sí) a `httpdocs/` del dominio, reemplazando lo anterior.
-2. Asegurate de que se suba también `.htaccess` (es un archivo oculto; si comprimís en zip desde macOS/Windows, verificá que esté incluido).
+2. Asegurate de que se suban también `web.config` y `.htaccess`. No borres la carpeta `.well-known` (la usa el certificado SSL).
 3. En Plesk → Hosting y DNS → **Hosting**: dejá como preferido el dominio **sin www** y activá el redireccionamiento 301 de HTTP a HTTPS (coincide con lo que hace `.htaccess`).
 
 ## SEO — archivos clave
@@ -38,6 +38,7 @@ También se puede descargar `dist` ya armado desde GitHub → Actions → "Build
 | `public/robots.txt` | Permite el rastreo e indica el sitemap |
 | `public/sitemap.xml` | Lista de URLs para Google Search Console (actualizar `lastmod` si cambia el contenido) |
 | `public/og-image.jpg` | Imagen al compartir el link (1200×630) |
-| `public/.htaccess` | https + sin www, 404 real, compresión y caché |
+| `public/web.config` | Hosting Windows/IIS (el actual): https + sin www, 404 real, compresión y caché |
+| `public/.htaccess` | Lo mismo para Apache/Linux (IIS lo ignora) |
 
 El dominio oficial es **https://amighini.com.ar/** — usar siempre ese en metadatos.
