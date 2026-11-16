@@ -38,24 +38,29 @@ const ShowroomSection = () => {
                     <br />
                     B1615BFA El Triángulo, Provincia de Buenos Aires
                   </a>
-                  <p className="text-sm text-muted-foreground">Visitas con cita previa</p>
                 </address>
               </div>
               <div className="flex items-start gap-4">
                 <Clock className="text-bronze mt-1 flex-shrink-0" size={20} />
                 <div>
                   <p className="text-foreground font-body font-medium">Lunes a Viernes: 9:00 - 18:00 hs</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    Sin turno, pero te recomendamos reservar para atenderte mejor.
+                  </p>
                   <p className="text-foreground font-body font-medium">Sábados: 9:00 - 13:00 hs</p>
+                  <p className="text-sm text-muted-foreground">Solo con cita previa.</p>
                 </div>
               </div>
             </div>
 
             <a
-              href="#contacto"
+              href="https://wa.me/5491134614400?text=Hola%2C%20quer%C3%ADa%20reservar%20un%20turno%20para%20visitar%20el%20showroom."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-accent text-accent-foreground font-body text-sm tracking-[0.2em] uppercase hover:bg-bronze-light transition-colors duration-300"
             >
               <CalendarCheck size={16} />
-              Agendar Visita
+              Reservar Visita por WhatsApp
             </a>
           </m.div>
 
